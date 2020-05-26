@@ -1,0 +1,90 @@
+
+    <div class="row" style="margin-left: 20px;margin-top: 20px;margin-right: 20px;">
+
+        <div class="col-md-2">
+            <div class="card border-primary mb-3">
+                <div class="card-header">Nuevos confirmados</div>
+                <div class="card-body text-primary">
+                  <h5 class="card-title">{{covid19.Global.NewConfirmed}}</h5>
+                </div>
+              </div>
+        </div>
+
+        <div class="col-md-2">
+            <div class="card border-primary mb-3">
+                <div class="card-header">Total Confirmado</div>
+                <div class="card-body text-primary">
+                    <h5 class="card-title">{{covid19.Global.TotalConfirmed}}</h5>
+                </div>
+              </div>
+        </div>
+
+        <div class="col-md-2">
+            <div class="card border-danger mb-3">
+                <div class="card-header">Nuevas muertes</div>
+                <div class="card-body text-danger">
+                    <h5 class="card-title">{{covid19.Global.NewDeaths}}</h5>
+                </div>
+              </div>
+        </div>
+
+        <div class="col-md-2">
+            <div class="card border-danger mb-3">
+                <div class="card-header">Muertes totales</div>
+                <div class="card-body text-danger">
+                    <h5 class="card-title">{{covid19.Global.TotalDeaths}}</h5>
+                </div>
+              </div>
+        </div>
+
+        <div class="col-md-2">
+            <div class="card border-success mb-3">
+                <div class="card-header">Nuevos recuperados</div>
+                <div class="card-body text-success">
+                    <h5 class="card-title">{{covid19.Global.NewRecovered}}</h5>
+                </div>
+              </div>
+        </div>
+
+        <div class="col-md-2">
+            <div class="card border-success mb-3">
+                <div class="card-header">Total recuperado</div>
+                <div class="card-body text-success">
+                    <h5 class="card-title">{{covid19.Global.TotalRecovered}}</h5>
+                </div>
+              </div>
+        </div>
+
+       
+      
+    </div>
+
+
+    <div class="row" style="margin-left: 20px;margin-top: 20px;margin-right: 20px;">
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">País</th>
+                <th scope="col">Nuevos confirmados</th>
+                <th scope="col">Total Confirmado</th>
+                <th scope="col">Nuevas muertes</th>
+                <th scope="col">Muertes totales</th>
+                <th scope="col">Nuevos recuperado</th>
+                <th scope="col">Total recuperado</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr *ngFor="let item of covid19.Countries">
+                <th><a routerLink="/countrie-details/{{item.CountryCode}}">{{item.Country}}</a></th>
+                <th>{{item.NewConfirmed}}</th>
+                <th>{{item.TotalConfirmed}}</th>
+                <th>{{item.NewDeaths}}</th>
+                <th>{{item.TotalDeaths}}</th>
+                <th>{{item.NewRecovered}}</th>
+                <th>{{item.TotalRecovered}}</th>
+              </tr>
+              
+            </tbody>
+          </table>
+    </div>

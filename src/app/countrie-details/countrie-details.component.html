@@ -1,0 +1,26 @@
+<div class="row" style="margin-left: 20px;margin-top: 20px;margin-right: 20px;">
+    <a routerLink="/" class="btn btn-sm btn-success">Regresar</a>
+  
+    <table class="table table-striped" style="margin-top: 20px;">
+        <thead>
+          <tr>
+            <th scope="col">País</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Confirmados</th>
+            <th scope="col">Muertes</th>
+            <th scope="col">Recuperado</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr *ngFor="let item of covid19">
+            <th>{{item.Country}}</th>
+            <th>{{item.Date}}</th>
+            <th>{{item.Confirmed}}</th>
+            <th>{{item.Deaths}}</th>
+            <th>{{item.Recovered}}</th>
+          </tr>
+          
+        </tbody>
+      </table>
+</div>
